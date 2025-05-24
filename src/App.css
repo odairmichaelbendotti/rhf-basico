@@ -1,0 +1,115 @@
+/* Login.css */
+
+:root {
+  --primary-color: #007bff;
+  --primary-dark-color: #0056b3;
+  --text-color: #333;
+  --placeholder-color: #999;
+  --border-color: #ddd;
+  --background-color: #f0f2f5;
+  --white: #fff;
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
+  --transition-speed: 0.3s ease;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.login-container {
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  transition: box-shadow var(--transition-speed);
+}
+
+.login-container:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: var(--text-color);
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1em;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1.1em;
+  color: var(--text-color);
+  background-color: var(--white);
+  transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+  box-sizing: border-box;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+  color: var(--placeholder-color);
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px 20px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-speed), box-shadow var(--transition-speed);
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-dark-color);
+  box-shadow: 0 4px 10px rgba(0, 86, 179, 0.3);
+}
+
+.submit-button:active {
+  background-color: #004085;
+  transform: translateY(1px);
+}
